@@ -9,6 +9,8 @@
 
 package goflagr
 
-type ModelError struct {
-	Message string `json:"message"`
+type Variant struct {
+	Id int64 `json:"id,omitempty"`
+	Key string `json:"key"`
+	Attachment *interface{} `json:"attachment,omitempty"`
 }

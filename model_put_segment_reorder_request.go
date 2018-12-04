@@ -9,6 +9,6 @@
 
 package goflagr
 
-type ModelError struct {
-	Message string `json:"message"`
+type PutSegmentReorderRequest struct {
+	SegmentIDs []int64 `json:"segmentIDs"`
 }

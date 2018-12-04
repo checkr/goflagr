@@ -9,6 +9,6 @@
 
 package goflagr
 
-type ModelError struct {
-	Message string `json:"message"`
+type PutDistributionsRequest struct {
+	Distributions []Distribution `json:"distributions"`
 }

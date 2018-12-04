@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **FlagID** | **int64** |  | [default to null]
+**FlagKey** | **string** |  | [default to null]
 **FlagSnapshotID** | **int64** |  | [optional] [default to null]
 **SegmentID** | **int64** |  | [default to null]
 **VariantID** | **int64** |  | [default to null]

@@ -9,6 +9,9 @@
 
 package goflagr
 
-type ModelError struct {
-	Message string `json:"message"`
+type Distribution struct {
+	Id int64 `json:"id,omitempty"`
+	Percent int64 `json:"percent"`
+	VariantKey string `json:"variantKey"`
+	VariantID int64 `json:"variantID"`
 }

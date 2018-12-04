@@ -9,6 +9,8 @@
 
 package goflagr
 
-type ModelError struct {
-	Message string `json:"message"`
+type EvaluationEntity struct {
+	EntityID string `json:"entityID,omitempty"`
+	EntityType string `json:"entityType,omitempty"`
+	EntityContext *interface{} `json:"entityContext,omitempty"`
 }

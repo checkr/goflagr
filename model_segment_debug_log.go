@@ -9,6 +9,7 @@
 
 package goflagr
 
-type ModelError struct {
-	Message string `json:"message"`
+type SegmentDebugLog struct {
+	SegmentID int64 `json:"segmentID,omitempty"`
+	Msg string `json:"msg,omitempty"`
 }

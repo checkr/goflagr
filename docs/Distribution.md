@@ -5,7 +5,6 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Id** | **int64** |  | [optional] [default to null]
 **Percent** | **int64** |  | [default to null]
-**Bitmap** | **string** |  | [optional] [default to null]
 **VariantKey** | **string** |  | [default to null]
 **VariantID** | **int64** |  | [default to null]
 
