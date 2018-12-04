@@ -18,7 +18,7 @@ Method | HTTP request | Description
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **ctx** | **context.Context** | context for logging, tracing, authentication, etc.
+ **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
   **flagID** | **int64**| numeric ID of the flag | 
   **body** | [**CreateVariantRequest**](CreateVariantRequest.md)| create a variant | 
 
@@ -45,7 +45,7 @@ No authorization required
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **ctx** | **context.Context** | context for logging, tracing, authentication, etc.
+ **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
   **flagID** | **int64**| numeric ID of the flag | 
   **variantID** | **int64**| numeric ID of the variant | 
 
@@ -72,7 +72,7 @@ No authorization required
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **ctx** | **context.Context** | context for logging, tracing, authentication, etc.
+ **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
   **flagID** | **int64**| numeric ID of the flag | 
 
 ### Return type
@@ -98,7 +98,7 @@ No authorization required
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **ctx** | **context.Context** | context for logging, tracing, authentication, etc.
+ **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
   **flagID** | **int64**| numeric ID of the flag | 
   **variantID** | **int64**| numeric ID of the variant | 
   **body** | [**PutVariantRequest**](PutVariantRequest.md)| update a variant | 

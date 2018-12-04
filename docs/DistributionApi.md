@@ -16,7 +16,7 @@ Method | HTTP request | Description
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **ctx** | **context.Context** | context for logging, tracing, authentication, etc.
+ **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
   **flagID** | **int64**| numeric ID of the flag | 
   **segmentID** | **int64**| numeric ID of the segment | 
 
@@ -45,7 +45,7 @@ replace the distribution with the new setting
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **ctx** | **context.Context** | context for logging, tracing, authentication, etc.
+ **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
   **flagID** | **int64**| numeric ID of the flag | 
   **segmentID** | **int64**| numeric ID of the segment | 
   **body** | [**PutDistributionsRequest**](PutDistributionsRequest.md)| array of distributions | 

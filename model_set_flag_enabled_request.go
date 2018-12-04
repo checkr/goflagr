@@ -9,6 +9,6 @@
 
 package goflagr
 
-type ModelError struct {
-	Message string `json:"message"`
+type SetFlagEnabledRequest struct {
+	Enabled bool `json:"enabled"`
 }

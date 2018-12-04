@@ -18,7 +18,7 @@ Method | HTTP request | Description
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **ctx** | **context.Context** | context for logging, tracing, authentication, etc.
+ **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
   **flagID** | **int64**| numeric ID of the flag | 
   **segmentID** | **int64**| numeric ID of the segment | 
   **body** | [**CreateConstraintRequest**](CreateConstraintRequest.md)| create a constraint | 
@@ -46,7 +46,7 @@ No authorization required
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **ctx** | **context.Context** | context for logging, tracing, authentication, etc.
+ **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
   **flagID** | **int64**| numeric ID of the flag | 
   **segmentID** | **int64**| numeric ID of the segment | 
   **constraintID** | **int64**| numeric ID of the constraint | 
@@ -74,7 +74,7 @@ No authorization required
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **ctx** | **context.Context** | context for logging, tracing, authentication, etc.
+ **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
   **flagID** | **int64**| numeric ID of the flag | 
   **segmentID** | **int64**| numeric ID of the segment | 
 
@@ -101,7 +101,7 @@ No authorization required
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **ctx** | **context.Context** | context for logging, tracing, authentication, etc.
+ **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
   **flagID** | **int64**| numeric ID of the flag | 
   **segmentID** | **int64**| numeric ID of the segment | 
   **constraintID** | **int64**| numeric ID of the constraint | 

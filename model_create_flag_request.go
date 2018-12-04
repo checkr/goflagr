@@ -9,6 +9,8 @@
 
 package goflagr
 
-type ModelError struct {
-	Message string `json:"message"`
+type CreateFlagRequest struct {
+	Description string `json:"description"`
+	// unique key representation of the flag
+	Key string `json:"key,omitempty"`
 }

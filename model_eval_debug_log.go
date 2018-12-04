@@ -9,6 +9,7 @@
 
 package goflagr
 
-type ModelError struct {
-	Message string `json:"message"`
+type EvalDebugLog struct {
+	SegmentDebugLogs []SegmentDebugLog `json:"segmentDebugLogs,omitempty"`
+	Msg string `json:"msg,omitempty"`
 }

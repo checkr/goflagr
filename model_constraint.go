@@ -9,6 +9,9 @@
 
 package goflagr
 
-type ModelError struct {
-	Message string `json:"message"`
+type Constraint struct {
+	Id int64 `json:"id,omitempty"`
+	Property string `json:"property"`
+	Operator string `json:"operator"`
+	Value string `json:"value"`
 }

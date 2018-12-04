@@ -9,6 +9,7 @@
 
 package goflagr
 
-type ModelError struct {
-	Message string `json:"message"`
+type CreateSegmentRequest struct {
+	Description string `json:"description"`
+	RolloutPercent int64 `json:"rolloutPercent"`
 }

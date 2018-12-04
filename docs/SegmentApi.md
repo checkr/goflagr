@@ -19,7 +19,7 @@ Method | HTTP request | Description
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **ctx** | **context.Context** | context for logging, tracing, authentication, etc.
+ **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
   **flagID** | **int64**| numeric ID of the flag to get | 
   **body** | [**CreateSegmentRequest**](CreateSegmentRequest.md)| create a segment under a flag | 
 
@@ -46,7 +46,7 @@ No authorization required
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **ctx** | **context.Context** | context for logging, tracing, authentication, etc.
+ **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
   **flagID** | **int64**| numeric ID of the flag | 
   **segmentID** | **int64**| numeric ID of the segment | 
 
@@ -73,7 +73,7 @@ No authorization required
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **ctx** | **context.Context** | context for logging, tracing, authentication, etc.
+ **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
   **flagID** | **int64**| numeric ID of the flag to get | 
 
 ### Return type
@@ -99,7 +99,7 @@ No authorization required
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **ctx** | **context.Context** | context for logging, tracing, authentication, etc.
+ **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
   **flagID** | **int64**| numeric ID of the flag | 
   **segmentID** | **int64**| numeric ID of the segment | 
   **body** | [**PutSegmentRequest**](PutSegmentRequest.md)| update a segment | 
@@ -127,7 +127,7 @@ No authorization required
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **ctx** | **context.Context** | context for logging, tracing, authentication, etc.
+ **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
   **flagID** | **int64**| numeric ID of the flag | 
   **body** | [**PutSegmentReorderRequest**](PutSegmentReorderRequest.md)| reorder segments | 
 

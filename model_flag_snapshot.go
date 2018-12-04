@@ -9,6 +9,9 @@
 
 package goflagr
 
-type ModelError struct {
-	Message string `json:"message"`
+type FlagSnapshot struct {
+	Id int64 `json:"id"`
+	UpdatedBy string `json:"updatedBy,omitempty"`
+	Flag *Flag `json:"flag"`
+	UpdatedAt string `json:"updatedAt"`
 }
