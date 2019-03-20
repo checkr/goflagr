@@ -88,6 +88,7 @@ Name | Type | Description  | Notes
  **descriptionLike** | **optional.String**| return flags partially matching given description | 
  **key** | **optional.String**| return flags matching given key | 
  **offset** | **optional.Int64**| return flags given the offset, it should usually set together with limit | 
+ **preload** | **optional.Bool**| return flags with preloaded segments and variants | 
 
 ### Return type
 

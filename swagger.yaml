@@ -4,7 +4,7 @@ info:
     Flagr is a feature flagging, A/B testing and dynamic configuration
     microservice. The base path for all the APIs is "/api/v1".
   title: Flagr
-  version: 1.0.13
+  version: 1.1.0
 tags:
   - name: flag
     description: Everything about the flag
@@ -79,6 +79,10 @@ paths:
           description: >-
             return flags given the offset, it should usually set together with
             limit
+        - in: query
+          name: preload
+          type: boolean
+          description: return flags with preloaded segments and variants
       responses:
         '200':
           description: list all the flags
@@ -1101,20 +1105,10 @@ definitions:
         type: string
   evalResult:
     type: object
-    required:
-      - flagID
-      - flagKey
-      - segmentID
-      - variantID
-      - variantKey
-      - variantAttachment
-      - evalContext
-      - timestamp
     properties:
       flagID:
         type: integer
         format: int64
-        minimum: 1
       flagKey:
         type: string
       flagSnapshotID:
@@ -1123,21 +1117,17 @@ definitions:
       segmentID:
         type: integer
         format: int64
-        minimum: 1
       variantID:
         type: integer
         format: int64
-        minimum: 1
       variantKey:
         type: string
-        minLength: 1
       variantAttachment:
         type: object
       evalContext:
         $ref: '#/definitions/evalContext'
       timestamp:
         type: string
-        minLength: 1
       evalDebugLog:
         $ref: '#/definitions/evalDebugLog'
   evalDebugLog:
