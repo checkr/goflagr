@@ -3,7 +3,7 @@ swagger: "2.0"
 info:
   description: "Flagr is a feature flagging, A/B testing and dynamic configuration\
     \ microservice. The base path for all the APIs is \"/api/v1\".\n"
-  version: "1.0.13"
+  version: "1.1.0"
   title: "Flagr"
 basePath: "/api/v1"
 tags:
@@ -79,6 +79,13 @@ paths:
         format: "int64"
         x-exportParamName: "Offset"
         x-optionalDataType: "Int64"
+      - name: "preload"
+        in: "query"
+        description: "return flags with preloaded segments and variants"
+        required: false
+        type: "boolean"
+        x-exportParamName: "Preload"
+        x-optionalDataType: "Bool"
       responses:
         200:
           description: "list all the flags"
@@ -1320,20 +1327,10 @@ definitions:
       flagKey: "flagKey"
   evalResult:
     type: "object"
-    required:
-    - "evalContext"
-    - "flagID"
-    - "flagKey"
-    - "segmentID"
-    - "timestamp"
-    - "variantAttachment"
-    - "variantID"
-    - "variantKey"
     properties:
       flagID:
         type: "integer"
         format: "int64"
-        minimum: 1
       flagKey:
         type: "string"
       flagSnapshotID:
@@ -1342,14 +1339,11 @@ definitions:
       segmentID:
         type: "integer"
         format: "int64"
-        minimum: 1
       variantID:
         type: "integer"
         format: "int64"
-        minimum: 1
       variantKey:
         type: "string"
-        minLength: 1
       variantAttachment:
         type: "object"
         properties: {}
@@ -1357,7 +1351,6 @@ definitions:
         $ref: "#/definitions/evalContext"
       timestamp:
         type: "string"
-        minLength: 1
       evalDebugLog:
         $ref: "#/definitions/evalDebugLog"
     example:
@@ -1376,8 +1369,8 @@ definitions:
           segmentID: 1
         - msg: "msg"
           segmentID: 1
-      flagID: 1
-      variantID: 1
+      flagID: 0
+      variantID: 5
       variantAttachment: "{}"
       flagSnapshotID: 6
       variantKey: "variantKey"
@@ -1475,8 +1468,8 @@ definitions:
             segmentID: 1
           - msg: "msg"
             segmentID: 1
-        flagID: 1
-        variantID: 1
+        flagID: 0
+        variantID: 5
         variantAttachment: "{}"
         flagSnapshotID: 6
         variantKey: "variantKey"
@@ -1497,8 +1490,8 @@ definitions:
             segmentID: 1
           - msg: "msg"
             segmentID: 1
-        flagID: 1
-        variantID: 1
+        flagID: 0
+        variantID: 5
         variantAttachment: "{}"
         flagSnapshotID: 6
         variantKey: "variantKey"
