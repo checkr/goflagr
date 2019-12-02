@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **GetHealth**
-> GetHealth(ctx, )
+> Health GetHealth(ctx, )
 
 
 Check if Flagr is healthy
@@ -18,7 +18,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
- (empty response body)
+[**Health**](health.md)
 
 ### Authorization
 
