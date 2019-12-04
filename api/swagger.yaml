@@ -3,7 +3,7 @@ swagger: "2.0"
 info:
   description: "Flagr is a feature flagging, A/B testing and dynamic configuration\
     \ microservice. The base path for all the APIs is \"/api/v1\".\n"
-  version: "1.1.0"
+  version: "1.1.4"
   title: "Flagr"
 basePath: "/api/v1"
 tags:
@@ -87,7 +87,7 @@ paths:
         x-exportParamName: "Preload"
         x-optionalDataType: "Bool"
       responses:
-        200:
+        "200":
           description: "list all the flags"
           schema:
             type: "array"
@@ -110,7 +110,7 @@ paths:
           $ref: "#/definitions/createFlagRequest"
         x-exportParamName: "Body"
       responses:
-        200:
+        "200":
           description: "returns the created flag"
           schema:
             $ref: "#/definitions/flag"
@@ -133,7 +133,7 @@ paths:
         format: "int64"
         x-exportParamName: "FlagID"
       responses:
-        200:
+        "200":
           description: "returns the flag"
           schema:
             $ref: "#/definitions/flag"
@@ -162,7 +162,7 @@ paths:
           $ref: "#/definitions/putFlagRequest"
         x-exportParamName: "Body"
       responses:
-        200:
+        "200":
           description: "returns the flag"
           schema:
             $ref: "#/definitions/flag"
@@ -184,7 +184,7 @@ paths:
         format: "int64"
         x-exportParamName: "FlagID"
       responses:
-        200:
+        "200":
           description: "OK deleted"
         default:
           description: "generic error response"
@@ -212,7 +212,7 @@ paths:
           $ref: "#/definitions/setFlagEnabledRequest"
         x-exportParamName: "Body"
       responses:
-        200:
+        "200":
           description: "returns the flag"
           schema:
             $ref: "#/definitions/flag"
@@ -235,7 +235,7 @@ paths:
         format: "int64"
         x-exportParamName: "FlagID"
       responses:
-        200:
+        "200":
           description: "variant ordered by variantID"
           schema:
             type: "array"
@@ -266,7 +266,7 @@ paths:
           $ref: "#/definitions/createVariantRequest"
         x-exportParamName: "Body"
       responses:
-        200:
+        "200":
           description: "variant just created"
           schema:
             $ref: "#/definitions/variant"
@@ -304,7 +304,7 @@ paths:
           $ref: "#/definitions/putVariantRequest"
         x-exportParamName: "Body"
       responses:
-        200:
+        "200":
           description: "variant just updated"
           schema:
             $ref: "#/definitions/variant"
@@ -334,7 +334,7 @@ paths:
         format: "int64"
         x-exportParamName: "VariantID"
       responses:
-        200:
+        "200":
           description: "deleted"
         default:
           description: "generic error response"
@@ -355,7 +355,7 @@ paths:
         format: "int64"
         x-exportParamName: "FlagID"
       responses:
-        200:
+        "200":
           description: "segments ordered by rank of the flag"
           schema:
             type: "array"
@@ -386,7 +386,7 @@ paths:
           $ref: "#/definitions/createSegmentRequest"
         x-exportParamName: "Body"
       responses:
-        200:
+        "200":
           description: "segment created"
           schema:
             $ref: "#/definitions/segment"
@@ -416,7 +416,7 @@ paths:
           $ref: "#/definitions/putSegmentReorderRequest"
         x-exportParamName: "Body"
       responses:
-        200:
+        "200":
           description: "segments reordered"
         default:
           description: "generic error response"
@@ -452,7 +452,7 @@ paths:
           $ref: "#/definitions/putSegmentRequest"
         x-exportParamName: "Body"
       responses:
-        200:
+        "200":
           description: "segment updated"
           schema:
             $ref: "#/definitions/segment"
@@ -482,7 +482,7 @@ paths:
         format: "int64"
         x-exportParamName: "SegmentID"
       responses:
-        200:
+        "200":
           description: "deleted"
         default:
           description: "generic error response"
@@ -511,7 +511,7 @@ paths:
         format: "int64"
         x-exportParamName: "SegmentID"
       responses:
-        200:
+        "200":
           description: "constraints under the segment"
           schema:
             type: "array"
@@ -550,7 +550,7 @@ paths:
           $ref: "#/definitions/createConstraintRequest"
         x-exportParamName: "Body"
       responses:
-        200:
+        "200":
           description: "the constraint created"
           schema:
             $ref: "#/definitions/constraint"
@@ -596,7 +596,7 @@ paths:
           $ref: "#/definitions/createConstraintRequest"
         x-exportParamName: "Body"
       responses:
-        200:
+        "200":
           description: "constraint just updated"
           schema:
             $ref: "#/definitions/constraint"
@@ -634,7 +634,7 @@ paths:
         format: "int64"
         x-exportParamName: "ConstraintID"
       responses:
-        200:
+        "200":
           description: "deleted"
         default:
           description: "generic error response"
@@ -663,7 +663,7 @@ paths:
         format: "int64"
         x-exportParamName: "SegmentID"
       responses:
-        200:
+        "200":
           description: "distribution under the segment"
           schema:
             type: "array"
@@ -703,7 +703,7 @@ paths:
           $ref: "#/definitions/putDistributionsRequest"
         x-exportParamName: "Body"
       responses:
-        200:
+        "200":
           description: "distribution under the segment"
           schema:
             type: "array"
@@ -728,7 +728,7 @@ paths:
         format: "int64"
         x-exportParamName: "FlagID"
       responses:
-        200:
+        "200":
           description: "returns the flag snapshots"
           schema:
             type: "array"
@@ -745,7 +745,7 @@ paths:
       operationId: "getFlagEntityTypes"
       parameters: []
       responses:
-        200:
+        "200":
           description: "returns all the FlagEntityTypes"
           schema:
             type: "array"
@@ -770,7 +770,7 @@ paths:
           $ref: "#/definitions/evalContext"
         x-exportParamName: "Body"
       responses:
-        200:
+        "200":
           description: "evaluation result"
           schema:
             $ref: "#/definitions/evalResult"
@@ -792,7 +792,7 @@ paths:
           $ref: "#/definitions/evaluationBatchRequest"
         x-exportParamName: "Body"
       responses:
-        200:
+        "200":
           description: "evaluation batch result"
           schema:
             $ref: "#/definitions/evaluationBatchResponse"
@@ -808,8 +808,10 @@ paths:
       operationId: "getHealth"
       parameters: []
       responses:
-        200:
-          description: "OK"
+        "200":
+          description: "status of health check"
+          schema:
+            $ref: "#/definitions/health"
         default:
           description: "generic error response"
           schema:
@@ -820,15 +822,33 @@ paths:
       - "export"
       description: "Export sqlite3 format of the db dump, which is converted from\
         \ the main database."
-      operationId: "getExportSQLite"
+      operationId: "getExportSqlite"
       produces:
       - "application/octet-stream"
       parameters: []
       responses:
-        200:
+        "200":
           description: "OK"
           schema:
             type: "file"
+        default:
+          description: "generic error response"
+          schema:
+            $ref: "#/definitions/error"
+  /export/eval_cache/json:
+    get:
+      tags:
+      - "export"
+      description: "Export JSON format of the eval cache dump"
+      operationId: "getExportEvalCacheJSON"
+      produces:
+      - "application/json"
+      parameters: []
+      responses:
+        "200":
+          description: "OK"
+          schema:
+            type: "object"
         default:
           description: "generic error response"
           schema:
@@ -871,6 +891,9 @@ definitions:
         type: "string"
         description: "it will override the entityType in the evaluation logs if it's\
           \ not empty"
+      notes:
+        type: "string"
+        description: "flag usage details in markdown format"
       createdBy:
         type: "string"
       updatedBy:
@@ -879,6 +902,7 @@ definitions:
         type: "string"
         format: "date-time"
     example:
+      notes: "notes"
       updatedBy: "updatedBy"
       dataRecordsEnabled: true
       createdBy: "createdBy"
@@ -974,6 +998,9 @@ definitions:
       key:
         type: "string"
         x-nullable: true
+      notes:
+        type: "string"
+        x-nullable: true
   setFlagEnabledRequest:
     type: "object"
     required:
@@ -1002,6 +1029,7 @@ definitions:
     example:
       updatedBy: "updatedBy"
       flag:
+        notes: "notes"
         updatedBy: "updatedBy"
         dataRecordsEnabled: true
         createdBy: "createdBy"
@@ -1497,6 +1525,13 @@ definitions:
         variantKey: "variantKey"
         flagKey: "flagKey"
         timestamp: "timestamp"
+  health:
+    type: "object"
+    properties:
+      status:
+        type: "string"
+    example:
+      status: "status"
   error:
     type: "object"
     required:

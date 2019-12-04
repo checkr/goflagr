@@ -9,8 +9,6 @@
 
 package goflagr
 
-type CreateFlagRequest struct {
-	Description string `json:"description"`
-	// unique key representation of the flag
-	Key string `json:"key,omitempty"`
+type Health struct {
+	Status string `json:"status,omitempty"`
 }
