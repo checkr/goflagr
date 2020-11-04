@@ -59,7 +59,9 @@ type APIClient struct {
 
 	SegmentApi *SegmentApiService
 
-	VariantApi *VariantApiService
+	VariantApi *TagApiService
+
+	TagApi *TagApiService
 }
 
 type service struct {
@@ -86,6 +88,7 @@ func NewAPIClient(cfg *Configuration) *APIClient {
 	c.HealthApi = (*HealthApiService)(&c.common)
 	c.SegmentApi = (*SegmentApiService)(&c.common)
 	c.VariantApi = (*VariantApiService)(&c.common)
+	c.TagApi = (*TagApiService)(&c.common)
 
 	return c
 }
