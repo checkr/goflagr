@@ -59,7 +59,7 @@ type APIClient struct {
 
 	SegmentApi *SegmentApiService
 
-	VariantApi *TagApiService
+	VariantApi *VariantApiService
 
 	TagApi *TagApiService
 }

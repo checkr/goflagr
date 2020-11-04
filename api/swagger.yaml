@@ -22,7 +22,7 @@ tags:
 - name: "health"
   description: "Check if Flagr is healthy"
 - name: "tag"
-description: "Tag is the process to put label on flag"
+  description: "Tag is the process to put label on flag"
 schemes:
 - "http"
 consumes:
