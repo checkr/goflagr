@@ -8,7 +8,6 @@
  */
 package swagger
 
-type PutSegmentRequest struct {
-	Description string `json:"description"`
-	RolloutPercent int64 `json:"rolloutPercent"`
+type CreateTagRequest struct {
+	Value string `json:"value"`
 }
