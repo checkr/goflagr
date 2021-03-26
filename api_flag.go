@@ -88,9 +88,7 @@ func (a *FlagApiService) CreateFlag(ctx context.Context, body CreateFlagRequest)
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
 		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
-		if err == nil {
-			return localVarReturnValue, localVarHttpResponse, err
-		}
+		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
@@ -212,7 +210,7 @@ func (a *FlagApiService) DeleteFlag(ctx context.Context, flagID int64) (*http.Re
 /*
 FlagApiService
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *FindFlagsOpts - Optional Parameters:
+ * @param optional nil or *FlagApiFindFlagsOpts - Optional Parameters:
      * @param "Limit" (optional.Int64) -  the numbers of flags to return
      * @param "Enabled" (optional.Bool) -  return flags having given enabled status
      * @param "Description" (optional.String) -  return flags exactly matching given description
@@ -224,7 +222,7 @@ FlagApiService
 @return []Flag
 */
 
-type FindFlagsOpts struct {
+type FlagApiFindFlagsOpts struct {
 	Limit           optional.Int64
 	Enabled         optional.Bool
 	Description     optional.String
@@ -234,7 +232,7 @@ type FindFlagsOpts struct {
 	Preload         optional.Bool
 }
 
-func (a *FlagApiService) FindFlags(ctx context.Context, localVarOptionals *FindFlagsOpts) ([]Flag, *http.Response, error) {
+func (a *FlagApiService) FindFlags(ctx context.Context, localVarOptionals *FlagApiFindFlagsOpts) ([]Flag, *http.Response, error) {
 	var (
 		localVarHttpMethod  = strings.ToUpper("Get")
 		localVarPostBody    interface{}
@@ -307,9 +305,7 @@ func (a *FlagApiService) FindFlags(ctx context.Context, localVarOptionals *FindF
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
 		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
-		if err == nil {
-			return localVarReturnValue, localVarHttpResponse, err
-		}
+		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
@@ -409,9 +405,7 @@ func (a *FlagApiService) GetFlag(ctx context.Context, flagID int64) (Flag, *http
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
 		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
-		if err == nil {
-			return localVarReturnValue, localVarHttpResponse, err
-		}
+		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
@@ -506,9 +500,7 @@ func (a *FlagApiService) GetFlagEntityTypes(ctx context.Context) ([]string, *htt
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
 		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
-		if err == nil {
-			return localVarReturnValue, localVarHttpResponse, err
-		}
+		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
@@ -608,9 +600,7 @@ func (a *FlagApiService) GetFlagSnapshots(ctx context.Context, flagID int64) ([]
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
 		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
-		if err == nil {
-			return localVarReturnValue, localVarHttpResponse, err
-		}
+		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
@@ -713,9 +703,7 @@ func (a *FlagApiService) PutFlag(ctx context.Context, flagID int64, body PutFlag
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
 		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
-		if err == nil {
-			return localVarReturnValue, localVarHttpResponse, err
-		}
+		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
@@ -818,9 +806,7 @@ func (a *FlagApiService) SetFlagEnabled(ctx context.Context, flagID int64, body 
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
 		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
-		if err == nil {
-			return localVarReturnValue, localVarHttpResponse, err
-		}
+		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
